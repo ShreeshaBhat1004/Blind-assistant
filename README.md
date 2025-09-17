@@ -21,24 +21,8 @@ A hands-free, conversational AI assistant that allows users to interact with a L
 
 The assistant is built on a modular, three-part pipeline that strategically allocates tasks between the Jetson's CPU and GPU to maximize performance and stability.
 
-```
+<img width="952" height="479" alt="image" src="https://github.com/user-attachments/assets/d5b29990-6899-4ee6-b275-4204b3ff1745" />
 
-\+--------------------------+      +---------------------------+      +-------------------------+
-|      "The Ears" (GPU)    |-----\>|      "The Brain" (CPU)    |-----\>|   Execution Environment |
-|   - Real-time STT        |      |   - Intent Parsing        |      |   - System Shell        |
-|   - `faster-whisper`     |      |   - Result Summarization  |      |   - Python `subprocess` |
-\+--------------------------+      |   - Gemma 2B (GGUF)       |      +-------------------------+
-|   - `llama-cpp-python`    |                 |
-\+---------------------------+                 |
-|                                 |
-|                                 V
-\+---------------------------+      +-------------------------+
-|     "The Mouth" (CPU)     |\<-----|   (Terminal Output)     |
-|   - High-quality TTS      |      +-------------------------+
-|   - `piper-tts`           |
-\+---------------------------+
-
-````
 
 ---
 
